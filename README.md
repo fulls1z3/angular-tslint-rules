@@ -190,19 +190,17 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-- **fat-arrow/lambda** functions should have parenthesis **`()`** around the **function parameters**.
+- **fat-arrow/lambda** functions should have parenthesis **`()`** around the **function parameters** (*except if removing them is allowed by TypeScript*).
 ```json
-"arrow-parens": true
+"arrow-parens": [
+  true,
+  "ban-single-arg-parens"
+]
 ```
 
 - *Always prefer* **`() => x`** over **`() => { return x; }`**.
 ```json
 "arrow-return-shorthand": true
-```
-
-- *Always prefer* **`f`** over **`x => f(x)`**.
-```json
-"no-unnecessary-callback-wrapper": true
 ```
 
 ### Variable design
@@ -237,11 +235,6 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-unnecessary-initializer": true
 ```
 
-- *Do not use* **literal numeric values** (*other than to define symbolic constants*).
-```json
-"no-magic-numbers": true
-```
-
 ### Requires and Imports
 - *Always use* the **`import`** statement keywords in **alphabetical order**.
 ```json
@@ -254,12 +247,11 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-- *Always `import`* submodules from **`rxjs`** and **`lodash`**.
+- *Always `import`* submodules from **`rxjs`**.
 ```json
 "import-blacklist": [
   true,
-  "rxjs",
-  "lodash"
+  "rxjs"
 ]
 ```
 
@@ -563,7 +555,7 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-- **Vertically align** parameters and statements (*helps maintain a readable, consistent style in your codebase.*)
+- **Vertically align** parameters and statements (*helps maintain a readable, consistent style in your codebase*).
 ```json
 "align": [
   true,
