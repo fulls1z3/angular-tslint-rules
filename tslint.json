@@ -34,9 +34,11 @@
       "allow-declarations",
       "allow-named-functions"
     ],
-    "arrow-parens": true,
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
     "arrow-return-shorthand": true,
-    "no-unnecessary-callback-wrapper": true,
     "prefer-const": true,
     "no-shadowed-variable": true,
     "one-variable-per-declaration": [
@@ -45,7 +47,6 @@
     ],
     "no-duplicate-variable": true,
     "no-unnecessary-initializer": true,
-    "no-magic-numbers": true,
     "ordered-imports": [
       true,
       {
@@ -55,8 +56,7 @@
     ],
     "import-blacklist": [
       true,
-      "rxjs",
-      "lodash"
+      "rxjs"
     ],
     "no-require-imports": true,
     "no-default-export": true,
