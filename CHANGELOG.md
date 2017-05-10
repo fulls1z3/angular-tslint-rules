@@ -1,6 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.0.1 - 2017-05-10
 ### Changed
 - `ban-single-arg-parens` option added to `arrow-parens`
 
@@ -9,5 +10,5 @@ All notable changes to this project will be documented in this file.
 - Removed `lodash` from `import-blacklist`
 - Removed `no-unnecessary-callback-wrapper`
 
-## v1.0.0-beta.1 - 2017-05-04
+## v1.0.0 - 2017-05-04
 - Initial commit
