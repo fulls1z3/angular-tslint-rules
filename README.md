@@ -584,11 +584,12 @@ Empty lines improve code readability by allowing the developer to logically grou
 
 #### Variables and Functions
 - All **variable**, and **function names** should be in **camelCase**.
-- *Do not use* **leading** and **trailing** underscore **`_`** characters.
+- *Do not use* **trailing** underscore **`_`** characters.
 ```json
 "variable-name": [
   true,
   "check-format",
+  "allow-leading-underscore",
   "ban-keywords"
 ]
 ```
