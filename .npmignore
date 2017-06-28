@@ -7,6 +7,11 @@ yarn.*
 # IDEs and editors
 /.idea
 
+# build tools
+.gitignore
+.gitattributes
+.npmignore
+
 # ci tools
 .bithoundrc
 
