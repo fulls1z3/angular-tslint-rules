@@ -45,7 +45,10 @@
       true,
       "ignore-for-loop"
     ],
-    "no-duplicate-variable": true,
+    "no-duplicate-variable": [
+      true,
+      "check-parameters"
+    ],
     "no-unnecessary-initializer": true,
     "ordered-imports": [
       true,
@@ -76,6 +79,7 @@
       true,
       "generic"
     ],
+    "prefer-object-spread": true,
     "object-literal-shorthand": true,
     "object-literal-key-quotes": [
       true,
@@ -84,6 +88,7 @@
     "quotemark": [
       true,
       "single",
+      "avoid-template",
       "avoid-escape"
     ],
     "prefer-template": true,
@@ -92,14 +97,17 @@
       true,
       "allow-null-check"
     ],
+    "binary-expression-operand-order": true,
     "no-bitwise": true,
     "use-isnan": true,
     "no-conditional-assignment": true,
+    "prefer-conditional-expression": true,
     "prefer-for-of": true,
     "forin": true,
     "switch-default": true,
     "no-switch-case-fall-through": true,
     "no-unsafe-finally": true,
+    "encoding": true,
     "cyclomatic-complexity": [
       true,
       20
@@ -114,9 +122,14 @@
     ],
     "indent": [
       true,
-      "spaces"
+      "spaces",
+      2
     ],
     "eofline": true,
+    "curly": [
+      true,
+      "as-needed"
+    ],
     "whitespace": [
       true,
       "check-branch",
@@ -218,6 +231,13 @@
     ],
     "no-empty": true,
     "no-sparse-arrays": true,
+    "angular-whitespace": [
+      true,
+      "check-interpolation",
+      "check-pipe"
+    ],
+    "banana-in-box": true,
+    "templates-no-negated-async": true,
     "directive-selector": [
       true,
       "attribute",
@@ -239,10 +259,11 @@
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
+    "use-view-encapsulation": true,
     "no-attribute-parameter-decorator": true,
     "no-input-rename": true,
     "no-output-rename": true,
-    "no-forward-ref": false,
+    "no-forward-ref": true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "pipe-naming": [

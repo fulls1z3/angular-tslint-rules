@@ -34,9 +34,10 @@ If you have questions, comments or suggestions, just create an issue on this rep
   - [Variable design](#variable-design)
   - [Requires and Imports](#requires-and-imports)
   - [Types](#types)
-  - [Object literals](#object-literals)
+  - [Objects](#objects)
   - [Strings](#strings)
   - [Operators](#operators)
+  - [Conditional statements](#conditional-statements)
   - [`for` statement](#for-statement)
   - [`switch` statement](#switch-statement)
   - [`try` statement](#try-statement)
@@ -227,7 +228,10 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 
 - *Do not use* **duplicate variable names** in the same block scope.
 ```json
-"no-duplicate-variable": true
+"no-duplicate-variable": [
+  true,
+  "check-parameters"
+]
 ```
 
 - *Do not use* a **`var`**/**`let`** statement or destructuring initializer to be **initialized** to **`undefined`**. 
@@ -319,7 +323,12 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-### Object literals
+### Objects
+- *Always prefer* **ES6 object spread operator** whenever possible.
+```json
+"prefer-object-spread": true
+```
+
 - *Always prefer* **ES6 object literal shorthand** whenever possible.
 ```json
 "object-literal-shorthand": true
@@ -339,6 +348,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "quotemark": [
   true,
   "single",
+  "avoid-template",
   "avoid-escape"
 ]
 ```
@@ -363,6 +373,11 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
+- In a binary expression, a **literal** should always be on the **right-hand side**.
+```json
+"binary-expression-operand-order": true
+```
+
 - *Do not use* **bitwise** operators.
 ```json
 "no-bitwise": true
@@ -376,6 +391,12 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 - Assignment expressions inside of the condition block of **`if`**, **`while`**, and **`do while`** statements should be **avoided**.
 ```json
 "no-conditional-assignment": true
+```
+
+### Conditional statements
+- *Always prefer* **conditional expression** over a standard **`if`** statement.
+```json
+"prefer-conditional-expression": true
 ```
 
 ### `for` statement
@@ -407,6 +428,11 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ```
 
 ### Maintainability
+- *Use* **UTF-8** encoding.
+```json
+"encoding": true
+```
+
 - *Limit* the **level of complexity** (cyclomatic complexity) in a function/method by **20 branches**.
 ```json
 "cyclomatic-complexity": [
@@ -415,9 +441,9 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-- Files should not exceed **1000 lines** of code.
+- Files should not exceed **1500 lines** of code.
 ```json
-"max-file-line-count": [true, 1000]
+"max-file-line-count": [true, 1500]
 ```
 
 - Keep the length of **each line** under **140 characters**.
@@ -428,11 +454,12 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-- *Do not use* **tabs** for indentation.
+- *Use* **2 spaces** for indentation.
 ```json
 "indent": [
   true,
-  "spaces"
+  "spaces",
+  2
 ]
 ```
 
@@ -442,6 +469,15 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ```
 
 ### Layout
+#### Curly braces
+*Use* **curly braces** as needed.
+```json
+"curly": [
+  true,
+  "as-needed"
+]
+```
+
 #### Whitespace
 Whitespaces should be used in the following circumstances:
 - All branching statements (**`if`**/**`else`**/**`for`**/**`while`**) should be followed by **one space**.
@@ -675,6 +711,13 @@ Empty lines improve code readability by allowing the developer to logically grou
 
 ### Codelyzer rules
 ```json
+"angular-whitespace": [
+  true,
+  "check-interpolation",
+  "check-pipe"
+],
+"banana-in-box": true,
+"templates-no-negated-async": true,
 "directive-selector": [
   true,
   "attribute",
@@ -699,7 +742,7 @@ Empty lines improve code readability by allowing the developer to logically grou
 "no-attribute-parameter-decorator": true,
 "no-input-rename": true,
 "no-output-rename": true,
-"no-forward-ref": false,
+"no-forward-ref": true,
 "use-life-cycle-interface": true,
 "use-pipe-transform-interface": true,
 "pipe-naming": [
