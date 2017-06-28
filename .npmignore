@@ -1,9 +1,5 @@
 ﻿# https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
 
-# compiled output
-*.ts
-!*.d.ts
-
 # dependencies
 /node_modules
 yarn.*
@@ -11,23 +7,9 @@ yarn.*
 # IDEs and editors
 /.idea
 
-# build tools
-/config
-.gitignore
-.gitattributes
-.npmignore
-gulpfile.js
-karma.conf.js
-tsconfig.json
-
 # ci tools
 .bithoundrc
-.travis.yml
-appveyor.yml
 
 # misc
 /.github
-/coverage
-/tests
 npm-debug.log
-tslint.json
