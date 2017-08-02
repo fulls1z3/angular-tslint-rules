@@ -19,8 +19,8 @@ Containing a set of [TSLint] and [codelyzer] rules, **`angular-tslint-rules`** h
 If you have questions, comments or suggestions, just create an issue on this repository. I'll try to revise and republish these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.2.0
-- [codelyzer] v3.0.1
+- [TSLint] v5.5.0
+- [codelyzer] v3.1.2
 
 ## Table of contents:
 - [Getting started](#getting-started)
