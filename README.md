@@ -8,19 +8,26 @@ Shared [TSLint] & [codelyzer] rules to enforce a consistent code style for [Angu
 The value of the software produced is directly affected by the **quality of the codebase**, and not every developer might
 - be **aware of the potential pitfalls** of certain constructions in [TypeScript],
 - be **introduced into certain conventions** when using the [Angular] framework,
-- know that not every developer is as capable in **understanding an elegant** (*but abstract*) **solution** as the original developer.
+- know that not every developer is as capable in **understanding an elegant** (*but abstract*) **solution** as the original
+developer.
 
-For that purpose, we need to use **static code analysis tools** such as [TSLint] and [codelyzer] to check readability, maintainability, and functionality errors.
+For that purpose, we need to use **static code analysis tools** such as [TSLint] and [codelyzer] to check readability, maintainability,
+and functionality errors.
 
-Although complying with these tools may seem to appear as **undesired overhead** or may **limit creativity**, it becomes **easier** for any new developers to **read**, **preventing** a lot of **time/frustration spent** figuring out the structure and characteristics of the code.
+Although complying with these tools may seem to appear as **undesired overhead** or may **limit creativity**, it becomes
+**easier** for any new developers to **read**, **preventing** a lot of **time/frustration spent** figuring out the structure
+and characteristics of the code.
 
-Containing a set of [TSLint] and [codelyzer] rules, **`angular-tslint-rules`** has been compiled using many contributions from colleagues, commercial/open-source projects and some other sources from the Internet, as well as years of development using the [Angular] framework.
+Containing a set of [TSLint] and [codelyzer] rules, **`angular-tslint-rules`** has been compiled using many contributions
+from colleagues, commercial/open-source projects and some other sources from the Internet, as well as years of development
+using the [Angular] framework.
 
-If you have questions, comments or suggestions, just create an issue on this repository. I'll try to revise and republish these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
+If you have questions, comments or suggestions, just create an issue on this repository. I'll try to revise and republish
+these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.2.0
-- [codelyzer] v3.0.1
+- [TSLint] v5.7.0
+- [codelyzer] v3.1.2
 
 ## Table of contents:
 - [Getting started](#getting-started)
@@ -43,6 +50,7 @@ If you have questions, comments or suggestions, just create an issue on this rep
   - [`try` statement](#try-statement)
   - [Maintainability](#maintainability)
   - [Layout](#layout)
+    - [Curly braces](#curly-braces)
     - [Whitespace](#whitespace)
     - [Empty lines](#empty-lines)
     - [Alignment](#alignment)
@@ -54,10 +62,11 @@ If you have questions, comments or suggestions, just create an issue on this rep
     - [JSDoc Comments](#jsdoc-comments)
   - [Misc](#misc)
   - [Codelyzer rules](#codelyzer-rules)
+- [Contributing](#contributing)
 - [License](#license)
 
-## Getting started
-### Installation
+## <a name="getting-started"></a> Getting started
+### <a name="installation"></a> Installation
 You can install **`angular-tslint-rules`** using `npm`
 ```
 npm install angular-tslint-rules --save
@@ -65,7 +74,7 @@ npm install angular-tslint-rules --save
 
 **Note**: You should have already installed [TSLint] and [codelyzer].
 
-## Usage
+## <a name="usage"></a> Usage
 To use these [TSLint] rules, use **configuration inheritance** via the **`extends`** keyword.
 
 A sample configuration is shown below, where `tslint.json` lives adjacent to your `node_modules` folder:
@@ -82,8 +91,8 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 }
 ```
 
-## Rules
-### Class and Member design
+## <a name="rules"></a> Rules
+### <a name="class-and-member-design"></a> Class and Member design
 - *Do not specify* the **`public`** keyword (*this is the default accessibility level*).
 - **`private`** and **`private static`** members in classes should be **denoted** with the **`private`** keyword.
 ```json
@@ -153,7 +162,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-construct": true
 ```
 
-### Interface design
+### <a name="interface-design"></a> Interface design
 - *Do not define* **constructors** for **interfaces**.
 > See: [Class and Member design](#class-and-member-design)
 
@@ -172,7 +181,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "interface-over-type-literal": true
 ```
 
-### Function design
+### <a name="function-design"></a> Function design
 - **Functions** should be defined right **after** the **variable declarations**.
 > See: [Class and Member design](#class-and-member-design)
 
@@ -181,8 +190,9 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-arg": true
 ```
 
-#### Anonymous functions
-- *Always prefer* defining anonymous functions as **fat-arrow/lambda** `() => { }` functions (*unless it is absolutely necessary to preserve the context in the function body*).
+#### <a name="anonymous-functions"></a> Anonymous functions
+- *Always prefer* defining anonymous functions as **fat-arrow/lambda** `() => { }` functions (*unless it is absolutely necessary
+to preserve the context in the function body*).
 ```json
 "only-arrow-functions": [
   true,
@@ -191,7 +201,8 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-- **fat-arrow/lambda** functions should have parenthesis **`()`** around the **function parameters** (*except if removing them is allowed by TypeScript*).
+- **fat-arrow/lambda** functions should have parenthesis **`()`** around the **function parameters** (*except if removing
+them is allowed by TypeScript*).
 ```json
 "arrow-parens": [
   true,
@@ -204,7 +215,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "arrow-return-shorthand": true
 ```
 
-### Variable design
+### <a name="variable-design"></a> Variable design
 - *Always prefer* **`const`** keyword **where appropriate**, for values that should never change.
 - *Then prefer* **`let`** everywhere else.
 - *Do not use* the **`var`** keyword.
@@ -239,7 +250,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-unnecessary-initializer": true
 ```
 
-### Requires and Imports
+### <a name="requires-and-imports"></a> Requires and Imports
 - *Always use* the **`import`** statement keywords in **alphabetical order**.
 ```json
 "ordered-imports": [
@@ -249,6 +260,11 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
     "named-imports-order": "case-insensitive"
   }
 ]
+```
+
+- *Always use* a **single** **`import`** statement per module.
+```json
+"no-duplicate-imports": true
 ```
 
 - *Always `import`* submodules from **`rxjs`**.
@@ -274,7 +290,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-reference": true
 ```
 
-### Types
+### <a name="types"></a> Types
 - *Always prefer* defining the **return type** of functions, methods and property declarations **explicitly**.
 - Types should be used **whenever necessary** (*no implicit **`any`***).
 ```json
@@ -323,7 +339,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-### Objects
+### <a name="objects"></a> Objects
 - *Always prefer* **ES6 object spread operator** whenever possible.
 ```json
 "prefer-object-spread": true
@@ -342,7 +358,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-### Strings
+### <a name="strings"></a> Strings
 - *Always prefer* single-quotes **`''`** for all strings, and use double-quotes **`""`** for strings within strings.
 ```json
 "quotemark": [
@@ -363,7 +379,7 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-invalid-template-strings": true
 ```
 
-### Operators
+### <a name="operators"></a> Operators
 - *Always prefer* using **`===`** and **`!==`** operators whenever possible.
 > **`==`** and **`!=`** operators do type coercion, which can lead to **headaches** when debugging code.
 ```json
@@ -388,29 +404,34 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "use-isnan": true
 ```
 
-- Assignment expressions inside of the condition block of **`if`**, **`while`**, and **`do while`** statements should be **avoided**.
+- Assignment expressions inside of the condition block of **`if`**, **`while`**, and **`do while`** statements should be
+**avoided**.
 ```json
 "no-conditional-assignment": true
 ```
 
-### Conditional statements
+### <a name="conditional-statements"></a> Conditional statements
 - *Always prefer* **conditional expression** over a standard **`if`** statement.
 ```json
-"prefer-conditional-expression": true
+"prefer-conditional-expression": [
+  true,
+  "check-else-if"
+]
 ```
 
-### `for` statement
+### <a name="for-statement"></a> `for` statement
 - *Always prefer* **`for-of`** loop over a standard **`for`** loop.
 ```json
 "prefer-for-of": true
 ```
 
-- Filter **`for-in`** statements with an **`if`** statement (*this prevents accidental iteration over properties inherited from an object’s prototype*).
+- Filter **`for-in`** statements with an **`if`** statement (*this prevents accidental iteration over properties inherited
+from an object’s prototype*).
 ```json
 "forin": true
 ```
 
-### `switch` statement
+### <a name="switch-statement"></a> `switch` statement
 - Each **switch** statement should have a **default case**.
 ```json
 "switch-default": true
@@ -421,13 +442,14 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-switch-case-fall-through": true
 ```
 
-### `try` statement
-- *Do not use* **control flow** statements, such as **`return`**, **`continue`**, **`break`** and **`throws`** in **`finally`** blocks.
+### <a name="try-statement"></a> `try` statement
+- *Do not use* **control flow** statements, such as **`return`**, **`continue`**, **`break`** and **`throws`** in **`finally`**
+blocks.
 ```json
 "no-unsafe-finally": true
 ```
 
-### Maintainability
+### <a name="maintainability"></a> Maintainability
 - *Use* **UTF-8** encoding.
 ```json
 "encoding": true
@@ -468,8 +490,8 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "eofline": true
 ```
 
-### Layout
-#### Curly braces
+### <a name="layout"></a> Layout
+#### <a name="curly-braces"></a> Curly braces
 *Use* **curly braces** as needed.
 ```json
 "curly": [
@@ -478,14 +500,20 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
-#### Whitespace
+#### <a name="whitespace"></a> Whitespace
 Whitespaces should be used in the following circumstances:
 - All branching statements (**`if`**/**`else`**/**`for`**/**`while`**) should be followed by **one space**.
 - Variable declarations should be separated by **one space** around the **type specification** and **equals token**.
-- All **operators** except the period **`.`**, left parenthesis **`(`**, and left bracket **`[`** should be separated from their operands by **one space**.
-- There should be **no space** around between the **unary/incremental operators** **`!x, -x, +x, ~x, ++x, --x`** and its **operand**.
-- There should be **one space** after the left curly brace **`{`** and before the right curly brace **`}`** containing **`import`** statement keywords. 
+- There should be **one space** between the **typecast** and its **target**.
+- All **operators** except the period **`.`**, left parenthesis **`(`**, and left bracket **`[`** should be separated from
+their operands by **one space**.
+- There should be **no space** between the **unary/incremental operators** **`!x, -x, +x, ~x, ++x, --x`** and its
+**operand**.
+- There should be **one space** between the **type operators** **`|`, `&`** and its **operand**. 
+- There should be **one space** after the left curly brace **`{`** and before the right curly brace **`}`** containing **`import`**
+statement keywords. 
 - Each separator (**`,`**,**`;`**) in the control part of a **`for`** statement should be followed with **one space**.
+- There should be **no space** after the **rest/spread operator** **`...`**.
 - The left curly brace **`{`** followed by a right parenthesis **`)`** should always separated by **one space**.
 ```json
 "whitespace": [
@@ -495,7 +523,10 @@ Whitespaces should be used in the following circumstances:
   "check-operator",
   "check-module",
   "check-separator",
+  "check-rest-spread",
   "check-type",
+  "check-typecast",
+  "check-type-operator",
   "check-preblock"
 ]
 ```
@@ -524,7 +555,8 @@ Whitespaces should be used in the following circumstances:
 ```
 
 - For each **function**, **class member** and **constructor**;
-  - There should be **no space** between the **name of the function/member** and the left parenthesis **`(`** of its parameter list.
+  - There should be **no space** between the **name of the function/member** and the left parenthesis **`(`** of its parameter
+  list.
 - For each **fat-arrow/lambda function**;
   - There should be **one space** between the right parenthesis **`)`** and the **`=>`**.
 ```json
@@ -540,6 +572,11 @@ Whitespaces should be used in the following circumstances:
 ]
 ```
 
+- There should be **no space** *within* **parenthesis**.
+```json
+"space-within-parens": 0
+```
+
 - Put **one space** between the **`import`** statement keywords.
 ```json
 "import-spacing": true
@@ -550,19 +587,22 @@ Whitespaces should be used in the following circumstances:
 "no-trailing-whitespace": true
 ```
 
-#### Empty lines
+#### <a name="empty-lines"></a> Empty lines
 Empty lines improve code readability by allowing the developer to logically group code blocks.
 - There should be an **empty line** before the **return** statement.
 ```json
 "newline-before-return": true
 ```
 
-- For each **function**, **anonymous function**, **class member**, **constructor**, **`else`**, **`catch`** and **`finally`** statements;
-  - There should be **one space** between the right parenthesis **`)`** and the left curly **`{`** brace that begins the statement body.
+- For each **function**, **anonymous function**, **class member**, **constructor**, **`else`**, **`catch`** and **`finally`**
+statements;
+  - There should be **one space** between the right parenthesis **`)`** and the left curly **`{`** brace that begins the
+  statement body.
 - For each **fat-arrow/lambda function**;  
   - There should be **one space** between the **`=>`** and the left curly brace **`{`** that begins the statement body.
 - **`else`** statements should **indented to align** with the line containing the closing brace for the **`if`** statement.
-- **`catch`** and **`finally`** statements should **indented to align** with the line containing the closing brace for the **`try`** statement.  
+- **`catch`** and **`finally`** statements should **indented to align** with the line containing the closing brace for the
+**`try`** statement.  
 ```json
 "one-line": [
   true,
@@ -582,12 +622,13 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-#### Alignment
-- A **semicolon** should be placed at the **end** of every **simple statement**.
+#### <a name="alignment"></a> Alignment
+- A **semicolon** should be placed at the **end** of every **simple statement** (*except at the end of bound class methods*).
 ```json
 "semicolon": [
   true,
-  "always"
+  "always",
+  "ignore-bound-class-methods"
 ]
 ```
 
@@ -600,7 +641,8 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-- *Always prefer* **trailing commas** in **array and object literals**, **destructuring assignments**, **function typings**, **named imports/exports** and **function parameters**.
+- *Always prefer* **trailing commas** in **array and object literals**, **destructuring assignments**, **function typings**,
+**named imports/exports** and **function parameters**.
 ```json
 "trailing-comma": [
   true,
@@ -611,14 +653,14 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-### Naming
-#### Classes and Interfaces
+### <a name="naming"></a> Naming
+#### <a name="classes-and-interfaces"></a> Classes and Interfaces
 - **Class** and **interface names** should be in **PascalCase**.
 ```json
 "class-name": true
 ```
 
-#### Variables and Functions
+#### <a name="variables-and-functions"></a> Variables and Functions
 - All **variable**, and **function names** should be in **camelCase**.
 - *Do not use* **trailing** underscore **`_`** characters.
 ```json
@@ -630,8 +672,8 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-### Documentation
-#### Inline Comments
+### <a name="documentation"></a> Documentation
+#### <a name="inline-comments"></a> Inline Comments
 - *Always prefer* **`//`** for all **inline comments**.
 - There should be **one space** before the comment.
 ```json
@@ -641,14 +683,15 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-#### JSDoc Comments
+#### <a name="jsdoc-comments"></a> JSDoc Comments
 - [JSDoc] style comments should start with **`/**`** and end with **`*/`**.
 ```json
 "jsdoc-format": true
 ```
 
-### Misc
-- *Do not use* the **`console`** method (*such messages are considered to be for debugging purposes and therefore might ship to the production environment*).
+### <a name="misc"></a> Misc
+- *Do not use* the **`console`** method (*such messages are considered to be for debugging purposes and therefore might
+ship to the production environment*).
 ```json
 "no-console": [
   true,
@@ -661,12 +704,14 @@ Empty lines improve code readability by allowing the developer to logically grou
 ]
 ```
 
-- *Do not use* the **`debugger`** statement (*this might cause the environment to stop execution and start up a debugger, if not omitted on the production code*).
+- *Do not use* the **`debugger`** statement (*this might cause the environment to stop execution and start up a debugger,
+if not omitted on the production code*).
 ```json
 "no-debugger": true
 ```
 
-- *Do not use* the **`eval`** function (*using `eval` on untrusted code might open a program up to several different injection attacks*).
+- *Do not use* the **`eval`** function (*using `eval` on untrusted code might open a program up to several different injection
+attacks*).
 ```json
 "no-eval": true
 ```
@@ -709,7 +754,7 @@ Empty lines improve code readability by allowing the developer to logically grou
 "no-sparse-arrays": true
 ```
 
-### Codelyzer rules
+### <a name="codelyzer-rules"></a> Codelyzer rules
 ```json
 "angular-whitespace": [
   true,
@@ -758,7 +803,14 @@ Empty lines improve code readability by allowing the developer to logically grou
 "template-to-ng-template": true
 ```
 
-## License
+## <a name="contributing"></a> Contributing
+If you want to file a bug, contribute some code, or improve documentation, please read up on the following contribution guidelines:
+- [Issue guidelines](CONTRIBUTING.md#submit)
+- [Contributing guidelines](CONTRIBUTING.md)
+- [Coding rules](CONTRIBUTING.md#rules)
+- [ChangeLog](CHANGELOG.md)
+
+## <a name="license"></a> License
 The MIT License (MIT)
 
 Copyright (c) 2017 [Burak Tasci]
