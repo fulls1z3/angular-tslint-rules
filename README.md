@@ -62,6 +62,7 @@ these rules with new insights, experiences and remarks in alignment with the upd
     - [JSDoc Comments](#jsdoc-comments)
   - [Misc](#misc)
   - [Codelyzer rules](#codelyzer-rules)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## <a name="getting-started"></a> Getting started
@@ -781,6 +782,13 @@ attacks*).
 "invoke-injectable": true,
 "template-to-ng-template": true
 ```
+
+## <a name="contributing"></a> Contributing
+If you want to file a bug, contribute some code, or improve documentation, please read up on the following contribution guidelines:
+- [Issue guidelines](CONTRIBUTING.md#submit)
+- [Contributing guidelines](CONTRIBUTING.md)
+- [Coding rules](CONTRIBUTING.md#rules)
+- [ChangeLog](CHANGELOG.md)
 
 ## <a name="license"></a> License
 The MIT License (MIT)
