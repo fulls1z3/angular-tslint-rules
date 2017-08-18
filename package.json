@@ -20,7 +20,7 @@
     "url": "https://github.com/fulls1z3/angular-tslint-rules/issues"
   },
   "homepage": "https://github.com/fulls1z3/angular-tslint-rules#readme",
-  "main": "tslint.json",
+  "main": "./tslint.json",
   "peerDependencies": {
     "codelyzer": "^3.1.2",
     "tslint": "~5.5.3"
