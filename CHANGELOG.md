@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## v1.0.4 - 2017-06-28
+## v1.0.4 - 2017-08-26
 ### Breaking changes
 - **packaging:** move public API to `ng-seed` organization
 
