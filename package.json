@@ -1,10 +1,10 @@
 {
   "name": "angular-tslint-rules",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Shared TSLint & codelyzer rules to enforce a consistent code style for Angular development",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fulls1z3/angular-tslint-rules.git"
+    "url": "https://github.com/ng-seed/angular-tslint-rules.git"
   },
   "keywords": [
     "linting-rules",
@@ -17,12 +17,12 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fulls1z3/angular-tslint-rules/issues"
+    "url": "https://github.com/ng-seed/angular-tslint-rules/issues"
   },
-  "homepage": "https://github.com/fulls1z3/angular-tslint-rules#readme",
+  "homepage": "https://github.com/ng-seed/angular-tslint-rules#readme",
   "main": "./tslint.json",
   "peerDependencies": {
     "codelyzer": "^3.1.2",
-    "tslint": "~5.5.3"
+    "tslint": "~5.7.0"
   }
 }
