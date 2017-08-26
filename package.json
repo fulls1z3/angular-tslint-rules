@@ -23,6 +23,6 @@
   "main": "./tslint.json",
   "peerDependencies": {
     "codelyzer": "^3.1.2",
-    "tslint": "~5.5.3"
+    "tslint": "~5.7.0"
   }
 }
