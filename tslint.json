@@ -57,6 +57,7 @@
         "named-imports-order": "case-insensitive"
       }
     ],
+    "no-duplicate-imports": true,
     "import-blacklist": [
       true,
       "rxjs"
@@ -101,7 +102,10 @@
     "no-bitwise": true,
     "use-isnan": true,
     "no-conditional-assignment": true,
-    "prefer-conditional-expression": true,
+    "prefer-conditional-expression": [
+      true,
+      "check-else-if"
+    ],
     "prefer-for-of": true,
     "forin": true,
     "switch-default": true,
@@ -137,7 +141,10 @@
       "check-operator",
       "check-module",
       "check-separator",
+      "check-rest-spread",
       "check-type",
+      "check-typecast",
+      "check-type-operator",
       "check-preblock"
     ],
     "typedef-whitespace": [
@@ -167,6 +174,7 @@
         "constructor": "never"
       }
     ],
+    "space-within-parens": 0,
     "import-spacing": true,
     "no-trailing-whitespace": true,
     "newline-before-return": true,
@@ -184,7 +192,8 @@
     ],
     "semicolon": [
       true,
-      "always"
+      "always",
+      "ignore-bound-class-methods"
     ],
     "align": [
       true,

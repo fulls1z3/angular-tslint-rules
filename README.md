@@ -26,7 +26,7 @@ If you have questions, comments or suggestions, just create an issue on this rep
 these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.5.0
+- [TSLint] v5.7.0
 - [codelyzer] v3.1.2
 
 ## Table of contents:
@@ -262,6 +262,11 @@ them is allowed by TypeScript*).
 ]
 ```
 
+- *Always use* a **single** **`import`** statement per module.
+```json
+"no-duplicate-imports": true
+```
+
 - *Always `import`* submodules from **`rxjs`**.
 ```json
 "import-blacklist": [
@@ -408,7 +413,10 @@ them is allowed by TypeScript*).
 ### <a name="conditional-statements"></a> Conditional statements
 - *Always prefer* **conditional expression** over a standard **`if`** statement.
 ```json
-"prefer-conditional-expression": true
+"prefer-conditional-expression": [
+  true,
+  "check-else-if"
+]
 ```
 
 ### <a name="for-statement"></a> `for` statement
@@ -496,13 +504,16 @@ blocks.
 Whitespaces should be used in the following circumstances:
 - All branching statements (**`if`**/**`else`**/**`for`**/**`while`**) should be followed by **one space**.
 - Variable declarations should be separated by **one space** around the **type specification** and **equals token**.
+- There should be **one space** between the **typecast** and its **target**.
 - All **operators** except the period **`.`**, left parenthesis **`(`**, and left bracket **`[`** should be separated from
 their operands by **one space**.
-- There should be **no space** around between the **unary/incremental operators** **`!x, -x, +x, ~x, ++x, --x`** and its
+- There should be **no space** between the **unary/incremental operators** **`!x, -x, +x, ~x, ++x, --x`** and its
 **operand**.
+- There should be **one space** between the **type operators** **`|`, `&`** and its **operand**. 
 - There should be **one space** after the left curly brace **`{`** and before the right curly brace **`}`** containing **`import`**
 statement keywords. 
 - Each separator (**`,`**,**`;`**) in the control part of a **`for`** statement should be followed with **one space**.
+- There should be **no space** after the **rest/spread operator** **`...`**.
 - The left curly brace **`{`** followed by a right parenthesis **`)`** should always separated by **one space**.
 ```json
 "whitespace": [
@@ -512,7 +523,10 @@ statement keywords.
   "check-operator",
   "check-module",
   "check-separator",
+  "check-rest-spread",
   "check-type",
+  "check-typecast",
+  "check-type-operator",
   "check-preblock"
 ]
 ```
@@ -556,6 +570,11 @@ statement keywords.
     "constructor": "never"
   }
 ]
+```
+
+- There should be **no space** *within* **parenthesis**.
+```json
+"space-within-parens": 0
 ```
 
 - Put **one space** between the **`import`** statement keywords.
@@ -604,11 +623,12 @@ statements;
 ```
 
 #### <a name="alignment"></a> Alignment
-- A **semicolon** should be placed at the **end** of every **simple statement**.
+- A **semicolon** should be placed at the **end** of every **simple statement** (*except at the end of bound class methods*).
 ```json
 "semicolon": [
   true,
-  "always"
+  "always",
+  "ignore-bound-class-methods"
 ]
 ```
 
