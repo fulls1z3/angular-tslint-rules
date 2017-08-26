@@ -1,7 +1,7 @@
 ** PR Checklist
 Please check if your PR fulfills the following requirements:
 
-- [ ] The commit message follows our guidelines: https://github.com/fulls1z3/angular-tslint-rules/blob/master/CONTRIBUTING.md#commit
+- [ ] The commit message follows our guidelines: https://github.com/ng-seed/angular-tslint-rules/blob/master/CONTRIBUTING.md#commit
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs have been added / updated (for bug fixes / features)
 
