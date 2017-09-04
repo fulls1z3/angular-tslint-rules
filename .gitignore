@@ -2,10 +2,10 @@
 
 # dependencies
 node_modules/
-yarn.lock
 
 # IDEs and editors
 .idea/
 
 # misc
 npm-debug.log
+yarn-error.log

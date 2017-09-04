@@ -22,7 +22,7 @@
   "homepage": "https://github.com/ng-seed/angular-tslint-rules#readme",
   "main": "./tslint.json",
   "peerDependencies": {
-    "codelyzer": "^3.1.2",
-    "tslint": "~5.7.0"
+    "codelyzer": ">=3.1.2",
+    "tslint": ">=5.7.0"
   }
 }
