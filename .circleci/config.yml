@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7
+    branches:
+      only: master
+    steps:
+      - checkout
+      - run:
+          name: Update yarn
+          command: 'sudo npm install -g yarn@latest'
+      - restore_cache:
+          keys:
+          - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          - deps-
+      - run:
+          name: Install dependencies
+          command: yarn
+      - save_cache:
+          key: deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths: 'node_modules'
