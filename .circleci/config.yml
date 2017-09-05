@@ -5,16 +5,15 @@ jobs:
       - image: circleci/node:7
     steps:
       - checkout
-      - run:
-          name: Update yarn
-          command: 'sudo npm install -g yarn@latest'
+      - run: sudo npm install -g yarn@latest
+      - run: sudo yarn global add greenkeeper-lockfile@1
       - restore_cache:
           keys:
           - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           - deps-
-      - run:
-          name: Install dependencies
-          command: yarn
+      - run: yarn
       - save_cache:
           key: deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths: 'node_modules'
+      - run: yarn ci:before
+      - run: yarn ci:after
