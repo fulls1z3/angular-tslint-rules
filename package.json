@@ -20,7 +20,16 @@
     "url": "https://github.com/ng-seed/angular-tslint-rules/issues"
   },
   "homepage": "https://github.com/ng-seed/angular-tslint-rules#readme",
+  "scripts": {
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  },
   "main": "./tslint.json",
+  "devDependencies": {
+    "standard-version": "^4.2.0"
+  },
   "peerDependencies": {
     "codelyzer": ">=3.1.2",
     "tslint": ">=5.7.0"
