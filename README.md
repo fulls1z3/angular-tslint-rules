@@ -1,8 +1,10 @@
 # angular-tslint-rules [![npm version](https://badge.fury.io/js/angular-tslint-rules.svg)](https://www.npmjs.com/package/angular-tslint-rules) [![npm downloads](https://img.shields.io/npm/dm/angular-tslint-rules.svg)](https://www.npmjs.com/package/angular-tslint-rules)
+
 Shared [TSLint] & [codelyzer] rules to enforce a consistent code style for [Angular] development
 
 [![CircleCI](https://circleci.com/gh/ng-seed/angular-tslint-rules.svg?style=shield)](https://circleci.com/gh/ng-seed/angular-tslint-rules)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ng-seed/angular-tslint-rules.svg)](https://greenkeeper.io/)
 
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
