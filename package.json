@@ -21,10 +21,9 @@
   },
   "homepage": "https://github.com/ng-seed/angular-tslint-rules#readme",
   "scripts": {
-    "release": "standard-version",
-    "release:major": "standard-version --release-as major",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch"
+    "ci:before": "greenkeeper-lockfile-update",
+    "ci:after": "greenkeeper-lockfile-upload",
+    "release": "npm run standard-version"
   },
   "main": "./tslint.json",
   "devDependencies": {
