@@ -2,19 +2,21 @@
 
 # dependencies
 /node_modules
-yarn.*
 
 # IDEs and editors
 /.idea
 
 # build tools
 .gitignore
-.gitattributes
+.jshintrc
 .npmignore
 
 # ci tools
-.bithoundrc
+/.circleci
 
 # misc
 /.github
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
 npm-debug.log
+yarn.*
