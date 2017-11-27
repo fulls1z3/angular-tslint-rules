@@ -1,5 +1,10 @@
 {
   "rules": {
+    "no-unnecessary-class": [
+      true,
+      "allow-constructor-only",
+      "allow-static-only"
+    ],
     "member-access": [
       true,
       "no-public"
@@ -39,6 +44,7 @@
       "ban-single-arg-parens"
     ],
     "arrow-return-shorthand": true,
+    "no-return-await": true,
     "prefer-const": true,
     "no-shadowed-variable": true,
     "one-variable-per-declaration": [
@@ -50,11 +56,13 @@
       "check-parameters"
     ],
     "no-unnecessary-initializer": true,
+    "no-implicit-dependencies": true,
     "ordered-imports": [
       true,
       {
         "import-sources-order": "any",
-        "named-imports-order": "case-insensitive"
+        "named-imports-order": "case-insensitive",
+        "grouped-imports": true
       }
     ],
     "no-duplicate-imports": true,
@@ -71,7 +79,6 @@
       "property-declaration"
     ],
     "no-inferrable-types": true,
-    "typeof-compare": true,
     "no-angle-bracket-type-assertion": true,
     "callable-types": true,
     "no-null-keyword": true,
@@ -110,6 +117,7 @@
     "forin": true,
     "switch-default": true,
     "no-switch-case-fall-through": true,
+    "no-duplicate-switch-case": true,
     "no-unsafe-finally": true,
     "encoding": true,
     "cyclomatic-complexity": [
@@ -193,7 +201,7 @@
     "semicolon": [
       true,
       "always",
-      "ignore-bound-class-methods"
+      "strict-bound-class-methods"
     ],
     "align": [
       true,
@@ -204,7 +212,8 @@
       true,
       {
         "multiline": "never",
-        "singleline": "never"
+        "singleline": "never",
+        "esSpecCompliant": true
       }
     ],
     "class-name": true,
@@ -218,7 +227,11 @@
       true,
       "check-space"
     ],
-    "jsdoc-format": true,
+    "jsdoc-format": [
+      true,
+      "check-multiline-start"
+    ],
+    "no-redundant-jsdoc": true,
     "no-console": [
       true,
       "log",
@@ -243,7 +256,7 @@
     "angular-whitespace": [
       true,
       "check-interpolation",
-      "check-pipe"
+      "check-semicolon"
     ],
     "banana-in-box": true,
     "templates-no-negated-async": true,
@@ -272,8 +285,11 @@
     "no-attribute-parameter-decorator": true,
     "no-input-rename": true,
     "no-output-rename": true,
+    "no-output-on-prefix": true,
     "no-forward-ref": true,
     "use-life-cycle-interface": true,
+    "contextual-life-cycle": true,
+    "trackBy-function": true,
     "use-pipe-transform-interface": true,
     "pipe-naming": [
       true,
@@ -282,9 +298,6 @@
     ],
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "templates-use-public": true,
-    "no-access-missing-member": true,
-    "invoke-injectable": true,
-    "template-to-ng-template": true
+    "pipe-impure": true
   }
 }
