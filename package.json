@@ -1,6 +1,6 @@
 {
   "name": "angular-tslint-rules",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Shared TSLint & codelyzer rules to enforce a consistent code style for Angular development",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   "scripts": {
     "ci:before": "greenkeeper-lockfile-update",
     "ci:after": "greenkeeper-lockfile-upload",
-    "release": "npm run standard-version"
+    "release": "standard-version"
   },
   "main": "./tslint.json",
   "devDependencies": {

@@ -1,4 +1,22 @@
 # Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="1.1.0"></a>
+# 1.1.0 (2017-11-27)
+
+
+### Features
+
+* **atr:** add new rules ([402a256](https://github.com/ng-seed/angular-tslint-rules/commit/402a256))
+* **atr:** add new rules ([64f994a](https://github.com/ng-seed/angular-tslint-rules/commit/64f994a))
+* **atr:** update rules ([fc7314c](https://github.com/ng-seed/angular-tslint-rules/commit/fc7314c))
+* **atr:** update rules ([1bdeb2e](https://github.com/ng-seed/angular-tslint-rules/commit/1bdeb2e))
+* **atr:** update rules to tslint v5.8.0 & codelyzer v4.0.1 ([#11](https://github.com/ng-seed/angular-tslint-rules/issues/11)) ([8aa55c9](https://github.com/ng-seed/angular-tslint-rules/commit/8aa55c9)), closes [#10](https://github.com/ng-seed/angular-tslint-rules/issues/10)
+
+
+
+# Change Log
 All notable changes to this project will be documented in this file.
 
 ## v1.0.4 - 2017-08-26
