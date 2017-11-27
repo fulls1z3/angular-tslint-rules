@@ -30,7 +30,7 @@
     "standard-version": "^4.2.0"
   },
   "peerDependencies": {
-    "codelyzer": ">=3.1.2",
-    "tslint": ">=5.7.0"
+    "codelyzer": ">=4.0.1",
+    "tslint": ">=5.8.0"
   }
 }

@@ -29,8 +29,8 @@ If you have questions, comments or suggestions, just create an issue on this rep
 these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.7.0
-- [codelyzer] v3.1.2
+- [TSLint] v5.8.0
+- [codelyzer] v4.0.1
 
 ## Table of contents:
 - [Getting started](#getting-started)
@@ -41,6 +41,7 @@ these rules with new insights, experiences and remarks in alignment with the upd
   - [Interface design](#interface-design)
   - [Function design](#function-design)
     - [Anonymous functions](#anonymous-functions)
+    - [Async functions](#async-functions)
   - [Variable design](#variable-design)
   - [Requires and Imports](#requires-and-imports)
   - [Types](#types)
@@ -96,6 +97,15 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 
 ## <a name="rules"></a> Rules
 ### <a name="class-and-member-design"></a> Class and Member design
+- *Do not use* **classes** unless required.
+```json
+"no-unnecessary-class": [
+  true,
+  "allow-constructor-only",
+  "allow-static-only"
+]
+```
+
 - *Do not specify* the **`public`** keyword (*this is the default accessibility level*).
 - **`private`** and **`private static`** members in classes should be **denoted** with the **`private`** keyword.
 ```json
@@ -218,6 +228,12 @@ them is allowed by TypeScript*).
 "arrow-return-shorthand": true
 ```
 
+#### <a name="async-functions"></a> Async functions
+- *Do not use* the unnecessary **`return await`**.
+```json
+"no-return-await": true
+```
+
 ### <a name="variable-design"></a> Variable design
 - *Always prefer* **`const`** keyword **where appropriate**, for values that should never change.
 - *Then prefer* **`let`** everywhere else.
@@ -254,13 +270,19 @@ them is allowed by TypeScript*).
 ```
 
 ### <a name="requires-and-imports"></a> Requires and Imports
+- *Do not **import*** modules that are *not listed* as a **dependency** in the project's **`package.json`**.
+```json
+"no-implicit-dependencies": true
+```
+
 - *Always use* the **`import`** statement keywords in **alphabetical order**.
 ```json
 "ordered-imports": [
   true,
   {
     "import-sources-order": "any",
-    "named-imports-order": "case-insensitive"
+    "named-imports-order": "case-insensitive",
+    "grouped-imports": true
   }
 ]
 ```
@@ -307,11 +329,6 @@ them is allowed by TypeScript*).
 - *Always prefer* **type inference** over **explicit type declaration** (*except for function return types*).
 ```json
 "no-inferrable-types": true
-```
-
-- The result of **`typeof`** should be **compared** to correct **string values**.
-```json
-"typeof-compare": true
 ```
 
 - *Always prefer* the use of **`as Type`** for type assertions over **`<Type>`**.
@@ -443,6 +460,11 @@ from an object???s prototype*).
 - Each switch case **except default** should **end** with **`break`**, **`return`**, or **`throw`**.
 ```json
 "no-switch-case-fall-through": true
+```
+
+- *Do not use* **duplicate** switch cases.
+```json
+"no-duplicate-switch-case": true
 ```
 
 ### <a name="try-statement"></a> `try` statement
@@ -631,7 +653,7 @@ statements;
 "semicolon": [
   true,
   "always",
-  "ignore-bound-class-methods"
+  "strict-bound-class-methods"
 ]
 ```
 
@@ -651,7 +673,8 @@ statements;
   true,
   {
     "multiline": "never",
-    "singleline": "never"
+    "singleline": "never",
+    "esSpecCompliant": true
   }
 ]
 ```
@@ -687,9 +710,17 @@ statements;
 ```
 
 #### <a name="jsdoc-comments"></a> JSDoc Comments
-- [JSDoc] style comments should start with **`/**`** and end with **`*/`**.
+- [JSDoc] comments should start with **`/**`** and end with **`*/`**.
 ```json
-"jsdoc-format": true
+"jsdoc-format": [
+  true,
+  "check-multiline-start"
+]
+```
+
+- *Do not use* redundant [JSDoc] comments.
+```json
+"no-redundant-jsdoc": true
 ```
 
 ### <a name="misc"></a> Misc
@@ -762,7 +793,7 @@ attacks*).
 "angular-whitespace": [
   true,
   "check-interpolation",
-  "check-pipe"
+  "check-semicolon"
 ],
 "banana-in-box": true,
 "templates-no-negated-async": true,
@@ -787,11 +818,15 @@ attacks*).
 "use-input-property-decorator": true,
 "use-output-property-decorator": true,
 "use-host-property-decorator": true,
+"use-view-encapsulation": true,
 "no-attribute-parameter-decorator": true,
 "no-input-rename": true,
 "no-output-rename": true,
+"no-output-on-prefix": true,
 "no-forward-ref": true,
 "use-life-cycle-interface": true,
+"contextual-life-cycle": true,
+"trackBy-function": true,
 "use-pipe-transform-interface": true,
 "pipe-naming": [
   true,
@@ -800,10 +835,7 @@ attacks*).
 ],
 "component-class-suffix": true,
 "directive-class-suffix": true,
-"templates-use-public": true,
-"no-access-missing-member": true,
-"invoke-injectable": true,
-"template-to-ng-template": true
+"pipe-impure": true
 ```
 
 ## <a name="contributing"></a> Contributing
