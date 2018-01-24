@@ -9,6 +9,7 @@
   "keywords": [
     "linting-rules",
     "tslint",
+    "frontend",
     "angular"
   ],
   "author": {
@@ -27,10 +28,10 @@
   },
   "main": "./tslint.json",
   "devDependencies": {
-    "standard-version": "^4.2.0"
+    "standard-version": "~4.3.0"
   },
   "peerDependencies": {
-    "codelyzer": ">=4.0.1",
-    "tslint": ">=5.8.0"
+    "codelyzer": ">=4.1.0",
+    "tslint": ">=5.9.0"
   }
 }
