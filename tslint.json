@@ -3,7 +3,8 @@
     "no-unnecessary-class": [
       true,
       "allow-constructor-only",
-      "allow-static-only"
+      "allow-static-only",
+      "allow-empty-class"
     ],
     "member-access": [
       true,
