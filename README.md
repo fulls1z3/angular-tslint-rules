@@ -102,7 +102,8 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 "no-unnecessary-class": [
   true,
   "allow-constructor-only",
-  "allow-static-only"
+  "allow-static-only",
+  "allow-empty-class"
 ]
 ```
 
@@ -681,7 +682,7 @@ statements;
 ]
 ```
 
-- *Always prefer* **trailing commas** in **array and object literals**, **destructuring assignments**, **function typings**,
+- *Do not use* **trailing commas** in **array and object literals**, **destructuring assignments**, **function typings**,
 **named imports/exports** and **function parameters**.
 ```json
 "trailing-comma": [
