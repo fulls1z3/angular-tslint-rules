@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/ng-seed/angular-tslint-rules/compare/v1.1.0...v1.2.0) (2018-01-24)
+
+
+### Bug Fixes
+
+* **atr:** add allow-empty-class to `no-unnecessary-class` ([5b3357c](https://github.com/ng-seed/angular-tslint-rules/commit/5b3357c)), closes [#13](https://github.com/ng-seed/angular-tslint-rules/issues/13)
+
+
+### Features
+
+* **atr:** update rules to tslint v5.9.0 & codelyzer v4.1.0 ([#16](https://github.com/ng-seed/angular-tslint-rules/issues/16)) ([92f144d](https://github.com/ng-seed/angular-tslint-rules/commit/92f144d))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/ng-seed/angular-tslint-rules/compare/v1.0.4...v1.1.0) (2017-11-27)
 ### Features
