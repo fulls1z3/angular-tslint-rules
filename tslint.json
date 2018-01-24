@@ -46,7 +46,12 @@
     "arrow-return-shorthand": true,
     "no-return-await": true,
     "prefer-const": true,
-    "no-shadowed-variable": true,
+    "no-shadowed-variable": [
+      true,
+      {
+        "temporalDeadZone": false
+      }
+    ],
     "one-variable-per-declaration": [
       true,
       "ignore-for-loop"
@@ -106,6 +111,7 @@
       "allow-null-check"
     ],
     "binary-expression-operand-order": true,
+    "no-dynamic-delete": true,
     "no-bitwise": true,
     "use-isnan": true,
     "no-conditional-assignment": true,
@@ -186,6 +192,7 @@
     "import-spacing": true,
     "no-trailing-whitespace": true,
     "newline-before-return": true,
+    "newline-per-chained-call": true,
     "one-line": [
       true,
       "check-open-brace",
