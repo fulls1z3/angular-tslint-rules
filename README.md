@@ -836,22 +836,30 @@ attacks*).
 "use-host-property-decorator": true,
 "use-view-encapsulation": true,
 "no-attribute-parameter-decorator": true,
+"no-output-named-after-standard-event": true,
 "no-input-rename": true,
 "no-output-rename": true,
 "no-output-on-prefix": true,
 "no-forward-ref": true,
+"no-unused-css": true,
 "use-life-cycle-interface": true,
 "contextual-life-cycle": true,
 "trackBy-function": true,
 "use-pipe-transform-interface": true,
-"pipe-naming": [
+"component-class-suffix": [
   true,
-  "camelCase",
-  "ngx"
+  "Component"
 ],
-"component-class-suffix": true,
-"directive-class-suffix": true,
-"pipe-impure": true
+"directive-class-suffix": [
+  true,
+  "Directive"
+],
+"pipe-impure": true,
+"i18n": [
+  true,
+  "check-id",
+  "check-text"
+]
 ```
 
 ## <a name="contributing"></a> Contributing
