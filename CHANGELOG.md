@@ -2,8 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+## [1.3.0](https://github.com/ng-seed/angular-tslint-rules/compare/v1.3.0...v1.2.1) (2018-04-13)
+
+
+### Features
+
+* **atr:** remove `import-blacklist` ([#20](https://github.com/ng-seed/angular-tslint-rules/issues/20)) ([d679aa9](https://github.com/ng-seed/angular-tslint-rules/commit/d679aa9))
+
+
+
 <a name="1.2.1"></a>
-## [1.2.1](https://github.com/ng-seed/angular-tslint-rules/compare/v1.2.0...v1.2.1) (2018-01-54)
+## [1.2.1](https://github.com/ng-seed/angular-tslint-rules/compare/v1.2.0...v1.2.1) (2018-01-24)
 
 
 ### Bug Fixes
