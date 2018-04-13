@@ -298,14 +298,6 @@ them is allowed by TypeScript*).
 "no-duplicate-imports": true
 ```
 
-- *Always `import`* submodules from **`rxjs`**.
-```json
-"import-blacklist": [
-  true,
-  "rxjs"
-]
-```
-
 - *Do not use* **`require`** statements at all (*use **ES6-style** **`import`** statement instead*).
 ```json
 "no-require-imports": true

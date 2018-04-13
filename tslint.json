@@ -72,10 +72,6 @@
       }
     ],
     "no-duplicate-imports": true,
-    "import-blacklist": [
-      true,
-      "rxjs"
-    ],
     "no-require-imports": true,
     "no-default-export": true,
     "no-reference": true,
