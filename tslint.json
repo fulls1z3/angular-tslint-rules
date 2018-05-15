@@ -116,6 +116,7 @@
       true,
       "check-else-if"
     ],
+    "prefer-while": true,
     "prefer-for-of": true,
     "forin": true,
     "switch-default": true,
@@ -229,7 +230,8 @@
     ],
     "comment-format": [
       true,
-      "check-space"
+      "check-space",
+      "check-lowercase"
     ],
     "jsdoc-format": [
       true,

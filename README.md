@@ -443,6 +443,11 @@ them is allowed by TypeScript*).
 ```
 
 ### <a name="for-statement"></a> `for` statement
+- *Always prefer* **`while`** loop over a standard **`for`** loop *without* **initializer**, **incrementor** and/or **termination condition**.
+```json
+"prefer-while": true
+```
+
 - *Always prefer* **`for-of`** loop over a standard **`for`** loop.
 ```json
 "prefer-for-of": true
@@ -710,10 +715,12 @@ statements;
 #### <a name="inline-comments"></a> Inline Comments
 - *Always prefer* **`//`** for all **inline comments**.
 - There should be **one space** before the comment.
+- The **first** (*non-whitespace*) character of a comment must be **lowercase**.
 ```json
 "comment-format": [
   true,
-  "check-space"
+  "check-space",
+  "check-lowercase"
 ]
 ```
 
