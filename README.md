@@ -720,7 +720,8 @@ statements;
 "comment-format": [
   true,
   "check-space",
-  "check-lowercase"
+  "check-lowercase",
+  {"ignore-words": ["TODO"]}
 ]
 ```
 
