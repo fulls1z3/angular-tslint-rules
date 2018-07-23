@@ -261,21 +261,41 @@
     ],
     "no-empty": true,
     "no-sparse-arrays": true,
+    "banana-in-box": true,
+    "contextual-life-cycle": true,
+    "decorator-not-allowed": true,
+    "pipe-impure": true,
+    "templates-no-negated-async": true,
+    "trackBy-function": true,
+    "i18n": [
+      true,
+      "check-id",
+      "check-text"
+    ],
+    "no-attribute-parameter-decorator": true,
+    "no-forward-ref": true,
+    "no-input-rename": true,
+    "no-life-cycle-call": true,
+    "no-output-named-after-standard-event": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-queries-parameter": true,
+    "no-template-call-expression": true,
+    "no-unused-css": true,
+    "prefer-inline-decorator": true,
+    "prefer-output-readonly": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-decorator": true,
+    "use-pipe-transform-interface": true,
+    "use-view-encapsulation": true,
     "angular-whitespace": [
       true,
       "check-interpolation",
       "check-semicolon"
     ],
-    "banana-in-box": true,
-    "templates-no-negated-async": true,
-    "directive-selector": [
+    "component-class-suffix": [
       true,
-      "attribute",
-      [
-        "ngx",
-        "test"
-      ],
-      "camelCase"
+      "Component"
     ],
     "component-selector": [
       true,
@@ -286,34 +306,22 @@
       ],
       "kebab-case"
     ],
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "use-view-encapsulation": true,
-    "no-attribute-parameter-decorator": true,
-    "no-output-named-after-standard-event": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "no-output-on-prefix": true,
-    "no-forward-ref": true,
-    "no-unused-css": true,
-    "use-life-cycle-interface": true,
-    "contextual-life-cycle": true,
-    "trackBy-function": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": [
-      true,
-      "Component"
-    ],
     "directive-class-suffix": [
       true,
       "Directive"
     ],
-    "pipe-impure": true,
-    "i18n": [
+    "directive-selector": [
       true,
-      "check-id",
-      "check-text"
-    ]
+      "attribute",
+      [
+        "ngx",
+        "test"
+      ],
+      "camelCase"
+    ],
+    "import-destructuring-spacing": true,
+    "use-host-property-decorator": true,
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true
   }
 }
