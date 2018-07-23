@@ -59,6 +59,7 @@ these rules with new insights, experiences and remarks in alignment with the upd
     - [Empty lines](#empty-lines)
     - [Alignment](#alignment)
   - [Naming](#naming)
+    - [Files](#files)
     - [Classes and Interfaces](#classes-and-interfaces)
     - [Variables and Functions](#variables-and-functions)
   - [Documentation](#documentation)
@@ -693,6 +694,15 @@ statements;
 ```
 
 ### <a name="naming"></a> Naming
+#### <a name="files"></a> Files
+- **Files** should be in **kebab-case**.
+```json
+"file-name-casing": [
+  true,
+  "kebab-case"
+]
+```
+
 #### <a name="classes-and-interfaces"></a> Classes and Interfaces
 - **Class** and **interface names** should be in **PascalCase**.
 ```json
