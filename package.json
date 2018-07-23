@@ -28,7 +28,7 @@
   },
   "main": "./tslint.json",
   "devDependencies": {
-    "standard-version": "~4.3.0"
+    "standard-version": "~4.4.0"
   },
   "peerDependencies": {
     "codelyzer": ">=4.3.0",
