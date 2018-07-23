@@ -221,6 +221,7 @@
         "esSpecCompliant": true
       }
     ],
+    "file-name-casing": [true, "kebab-case"],
     "class-name": true,
     "variable-name": [
       true,
