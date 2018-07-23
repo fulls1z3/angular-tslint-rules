@@ -2,9 +2,9 @@
 
 Shared [TSLint] & [codelyzer] rules to enforce a consistent code style for [Angular] development
 
-[![CircleCI](https://circleci.com/gh/ng-seed/angular-tslint-rules.svg?style=shield)](https://circleci.com/gh/ng-seed/angular-tslint-rules)
+[![CircleCI](https://circleci.com/gh/holidaylab/angular-tslint-rules.svg?style=shield)](https://circleci.com/gh/holidaylab/angular-tslint-rules)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ng-seed/angular-tslint-rules.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/holidaylab/angular-tslint-rules.svg)](https://greenkeeper.io/)
 
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
@@ -893,7 +893,7 @@ If you want to file a bug, contribute some code, or improve documentation, pleas
 ## <a name="license"></a> License
 The MIT License (MIT)
 
-Copyright (c) 2018 [Burak Tasci]
+Copyright (c) 2018 [HolidayLAB]
 
 [TSLint]: https://github.com/palantir/tslint
 [codelyzer]: https://github.com/mgechev/codelyzer
@@ -902,4 +902,4 @@ Copyright (c) 2018 [Burak Tasci]
 [JSDoc]: http://usejsdoc.org
 [JetBrains]: https://www.jetbrains.com/community/opensource
 [WebStorm]:   https://www.jetbrains.com/webstorm
-[Burak Tasci]: https://github.com/fulls1z3
+[HolidayLAB]: https://github.com/holidaylab
