@@ -29,8 +29,8 @@ If you have questions, comments or suggestions, just create an issue on this rep
 these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.9.0
-- [codelyzer] v4.1.0
+- [TSLint] v5.12.0
+- [codelyzer] v4.5.0
 
 ## Table of contents:
 - [Getting started](#getting-started)
@@ -130,6 +130,11 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
+- *Always prefer* **readonly** private members (*maintain immutability*).
+```json
+"prefer-readonly": true
+```
+
 - Member **overloads** should be **consecutive**.
 ```json
 "adjacent-overload-signatures": true
@@ -149,12 +154,27 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 ]
 ```
 
+- *Do not use* a **class method** *outside* of a **method call**.
+```json
+"no-unbound-method": [true, "ignore-static"]
+```
+
 - *Do not use* the **`this`** keyword **outside class context** (*including functions in methods*).
 ```json
 "no-invalid-this": [
   true,
   "check-function-in-method"
 ]
+```
+
+- *Do not assign* **`this`** to local **variables**.
+```json
+"no-this-assignment": true
+```
+
+- *Do not use* blank **constructors**.
+```json
+"unnecessary-constructor": true
 ```
 
 - *Do not invoke* the **`super`** method **twice** in a constructor (*except in branched statements or nested class constructors*).
@@ -200,20 +220,35 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 - **Functions** should be defined right **after** the **variable declarations**.
 > See: [Class and Member design](#class-and-member-design)
 
+- *Do not use* the *built-in* **function constructor**.
+```json
+"function-constructor": true
+```
+
+- *Do not reassign* function **parameters** (*maintain immutability*).
+```json
+"no-parameter-reassignment": true
+```
+
+- *Do not use* **void expressions** in **statement** position.
+```json
+"no-void-expression": true
+```
+
+- *Always prefer* **`return;`** in **void** functions and **`return undefined;`** in **value-returning** functions.
+```json
+"return-undefined": true
+```
+
 - *Do not invoke* **`arguments.callee`** within a function, as it makes **impossible** various **performance optimizations**.
 ```json
 "no-arg": true
 ```
 
 #### <a name="anonymous-functions"></a> Anonymous functions
-- *Always prefer* defining anonymous functions as **fat-arrow/lambda** `() => { }` functions (*unless it is absolutely necessary
-to preserve the context in the function body*).
+- *Always prefer* defining anonymous functions as **fat-arrow/lambda** `() => { }` functions.
 ```json
-"only-arrow-functions": [
-  true,
-  "allow-declarations",
-  "allow-named-functions"
-]
+"only-arrow-functions": true
 ```
 
 - **fat-arrow/lambda** functions should have parenthesis **`()`** around the **function parameters** (*except if removing
@@ -227,21 +262,58 @@ them is allowed by TypeScript*).
 
 - *Always prefer* **`() => x`** over **`() => { return x; }`**.
 ```json
-"arrow-return-shorthand": true
+"arrow-return-shorthand": [
+  true,
+  "multiline"
+]
+```
+
+- *Always prefer* just **`f`** over **`x => f(x)`**.
+```json
+"no-unnecessary-callback-wrapper": true
+```
+
+- *Do not use* unnecessary and/or misleading **scope bindings** on functions.
+```json
+"unnecessary-bind": true
 ```
 
 #### <a name="async-functions"></a> Async functions
-- *Do not use* the unnecessary **`return await`**.
+- *Always prefer* marking **`async`** functions returning a **`Promise`**.
+```json
+"promise-function-async": true
+```
+
+- *Do not use* the **unnecessary** **`async`** (*if the awaited value that is not a `Promise`*).
+```json
+"await-promise": true
+```
+
+- *Do not use* the **unnecessary** **`return await`**.
 ```json
 "no-return-await": true
 ```
 
+- *Do not use* **floating** **`Promise`**.
+```json
+"no-floating-promises": true
+```
+
 ### <a name="variable-design"></a> Variable design
+- *Do not use* a **variable** before declaring.
+```json
+"no-use-before-declare": true
+```
+
 - *Always prefer* **`const`** keyword **where appropriate**, for values that should never change.
-- *Then prefer* **`let`** everywhere else.
-- *Do not use* the **`var`** keyword.
+- *Avoid using* **`let`** (*maintain immutability*).
 ```json
 "prefer-const": true
+```
+
+- *Do not use* the **`var`** keyword.
+```json
+"no-var-keyword": true
 ```
 
 - *Do not use* **implied global variables**.
@@ -252,7 +324,7 @@ them is allowed by TypeScript*).
   {
     "temporalDeadZone": false
   }
-],
+]
 ```
 
 - Declare **one variable** at a time (*except in loops*).
@@ -282,12 +354,22 @@ them is allowed by TypeScript*).
 "no-implicit-dependencies": true
 ```
 
+- *Do not use* **`import`** statements with **side-effect**.
+```json
+"no-import-side-effect": [
+  true,
+  {
+    "ignore-module": "(hammerjs|core-js|zone.js)"
+  }
+]
+```
+
 - *Always use* the **`import`** statement keywords in **alphabetical order**.
 ```json
 "ordered-imports": [
   true,
   {
-    "import-sources-order": "any",
+    "import-sources-order": "case-insensitive",
     "named-imports-order": "case-insensitive",
     "grouped-imports": true
   }
@@ -304,8 +386,9 @@ them is allowed by TypeScript*).
 "no-require-imports": true
 ```
 
-- *Do not use* **default exports** in ES6-style modules.
+- *Do not use* **default imports** and **exports** in ES6-style modules.
 ```json
+"no-default-import": true,
 "no-default-export": true
 ```
 
@@ -330,9 +413,29 @@ them is allowed by TypeScript*).
 "no-inferrable-types": true
 ```
 
+- *Do not use* **type inference** of `{}` (*empty object type*).
+```json
+"no-inferred-empty-object-type": true
+```
+
+- *Do not use* the **default** type arguments **explicitly**.
+```json
+"use-default-type-parameter": true
+```
+
+- Meanwhile, *avoid* **type assertion** for **object literals**.
+```json
+"no-object-literal-type-assertion": true
+```
+
 - *Always prefer* the use of **`as Type`** for type assertions over **`<Type>`**.
 ```json
 "no-angle-bracket-type-assertion": true
+```
+
+- *Do not use* **unnecessary** type assertions.
+```json
+"no-unnecessary-type-assertion": true
 ```
 
 - *Always prefer* writing an **interface** or **literal type** with just a **call signature** as a function type.
@@ -377,6 +480,11 @@ them is allowed by TypeScript*).
 ]
 ```
 
+- *Do not use* **string literal** property access.
+```json
+"no-string-literal": true
+```
+
 ### <a name="strings"></a> Strings
 - *Always prefer* single-quotes **`''`** for all strings, and use double-quotes **`""`** for strings within strings.
 ```json
@@ -406,6 +514,19 @@ them is allowed by TypeScript*).
   true,
   "allow-null-check"
 ]
+```
+
+- *Always prefer* explicit **`+= 1`** and **`-= 1`** *pre-unary* **operators** over **`++i`** and **`--i`**.
+```json
+"increment-decrement": [
+  true,
+  "allow-post"
+]
+```
+
+- *Always prefer* using **operands** of the **same type** with the **`+``** **operator**.
+```json
+"restrict-plus-operands": true
 ```
 
 - In a binary expression, a **literal** should always be on the **right-hand side**.
@@ -443,6 +564,23 @@ them is allowed by TypeScript*).
 ]
 ```
 
+- *Do not* **compare** to a **boolean literal** (*ex: `x === true`*).
+```json
+"no-boolean-literal-compare": true
+```
+
+- *Do not use* any *always* **truthy**/**falsy** condition in **boolean expressions** (*ex: `val || undefined`*). 
+```json
+"strict-boolean-expressions": [
+  true,
+  "allow-undefined-union",
+  "allow-string",
+  "allow-enum",
+  "allow-number",
+  "allow-mix"
+]
+```
+
 ### <a name="for-statement"></a> `for` statement
 - *Always prefer* **`while`** loop over a standard **`for`** loop *without* **initializer**, **incrementor** and/or **termination condition**.
 ```json
@@ -458,6 +596,11 @@ them is allowed by TypeScript*).
 from an object???s prototype*).
 ```json
 "forin": true
+```
+
+- *Do not* **iterate** over an **array** with a **`for-in`** loop.
+```json
+"no-for-in-array": true
 ```
 
 ### <a name="switch-statement"></a> `switch` statement
@@ -671,10 +814,12 @@ statements;
 ]
 ```
 
-- **Vertically align** parameters and statements (*helps maintain a readable, consistent style in your codebase*).
+- **Vertically align** elements, members, parameters and statements (*helps maintain a readable, consistent style in your codebase*).
 ```json
 "align": [
   true,
+  "elements",
+  "members",
   "parameters",
   "statements"
 ]
@@ -709,6 +854,14 @@ statements;
 "class-name": true
 ```
 
+- **Interface names** should not have an **`I`** prefix.
+```json
+"interface-name": [
+  true,
+  "never-prefix"
+]
+```
+
 #### <a name="variables-and-functions"></a> Variables and Functions
 - All **variable**, and **function names** should be in **camelCase**.
 - *Do not use* **trailing** underscore **`_`** characters.
@@ -722,16 +875,22 @@ statements;
 ```
 
 ### <a name="documentation"></a> Documentation
+- *Always prefer* **single-line** or **JSDoc** comments.
+```json
+"comment-type": [
+  true,
+  "singleline",
+  "doc"
+]
+```
+
 #### <a name="inline-comments"></a> Inline Comments
 - *Always prefer* **`//`** for all **inline comments**.
 - There should be **one space** before the comment.
-- The **first** (*non-whitespace*) character of a comment must be **lowercase**.
 ```json
 "comment-format": [
   true,
-  "check-space",
-  "check-lowercase",
-  {"ignore-words": ["TODO"]}
+  "check-space"
 ]
 ```
 
@@ -747,6 +906,11 @@ statements;
 - *Do not use* redundant [JSDoc] comments.
 ```json
 "no-redundant-jsdoc": true
+```
+
+- *Do not use* the **`// @ts-ignore`** comments.
+```json
+"ban-ts-ignore": true
 ```
 
 ### <a name="misc"></a> Misc
@@ -791,6 +955,12 @@ attacks*).
 "no-internal-module": true
 ```
 
+- *Always prefer* decimal literals **beginning** with **`0`** (*instead of `.`*).
+- *Avoid* decimal literals **ending** with a trailing **`0`**.
+```json
+"number-literal-format": true
+```
+
 - *Always prefer* the **`radix`** parameter to be specified when calling **`parseInt`**.
 ```json
 "radix": true
@@ -801,7 +971,7 @@ attacks*).
 "no-unused-expression": [
   true,
   "allow-fast-null-checks"
-],
+]
 ```
 
 - *Do not use* empty blocks **`{}`** in the code.
@@ -812,6 +982,11 @@ attacks*).
 - *Do not use* **missing elements** in arrays.
 ```json
 "no-sparse-arrays": true
+```
+
+- *Do not use* **comma operator**.
+```json
+"ban-comma-operator": true
 ```
 
 ### <a name="codelyzer-rules"></a> Codelyzer rules
