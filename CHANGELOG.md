@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.12.1"></a>
+# [1.12.0](https://github.com/angular-tslint-rules/commit/compare/v1.12.0...v1.12.1) (2018-12-20)
+
+
+### Bug Fixes
+
+* **atr:** remove no-inferred-empty-object-type ([9dff3bb](https://github.com/ng-seed/angular-tslint-rules/commit/9dff3bb))
+
+
+### Features
+
+* **atr:** update curly braces and grouped imports per ASG ([c0b7387](https://github.com/ng-seed/angular-tslint-rules/commit/c0b7387))
+
+
+
 <a name="1.12.0"></a>
 # [1.12.0](https://github.com/ng-seed/angular-tslint-rules/compare/v1.5.0...v1.12.0) (2018-12-18)
 
