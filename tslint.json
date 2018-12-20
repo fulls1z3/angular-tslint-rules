@@ -106,7 +106,6 @@
       "property-declaration"
     ],
     "no-inferrable-types": true,
-    "no-inferred-empty-object-type": true,
     "use-default-type-parameter": true,
     "no-object-literal-type-assertion": true,
     "no-angle-bracket-type-assertion": true,

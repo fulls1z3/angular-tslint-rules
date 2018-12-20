@@ -413,11 +413,6 @@ them is allowed by TypeScript*).
 "no-inferrable-types": true
 ```
 
-- *Do not use* **type inference** of `{}` (*empty object type*).
-```json
-"no-inferred-empty-object-type": true
-```
-
 - *Do not use* the **default** type arguments **explicitly**.
 ```json
 "use-default-type-parameter": true
