@@ -371,7 +371,7 @@ them is allowed by TypeScript*).
   {
     "import-sources-order": "case-insensitive",
     "named-imports-order": "case-insensitive",
-    "grouped-imports": true
+    "grouped-imports": false
   }
 ]
 ```
@@ -664,12 +664,9 @@ blocks.
 
 ### <a name="layout"></a> Layout
 #### <a name="curly-braces"></a> Curly braces
-*Use* **curly braces** as needed.
+*Always Use* **curly braces**.
 ```json
-"curly": [
-  true,
-  "as-needed"
-]
+"curly": true
 ```
 
 #### <a name="whitespace"></a> Whitespace
