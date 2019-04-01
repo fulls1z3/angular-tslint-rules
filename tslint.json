@@ -29,6 +29,7 @@
       true,
       "check-function-in-method"
     ],
+    "static-this": true,
     "no-this-assignment": true,
     "unnecessary-constructor": true,
     "no-duplicate-super": true,
@@ -150,14 +151,17 @@
       true,
       "check-else-if"
     ],
+    "no-tautology-expression": true,
     "no-boolean-literal-compare": true,
+    "unnecessary-else": true,
     "strict-boolean-expressions": [
       true,
       "allow-undefined-union",
       "allow-string",
       "allow-enum",
       "allow-number",
-      "allow-mix"
+      "allow-mix",
+      "allow-rhs"
     ],
     "prefer-while": true,
     "prefer-for-of": true,
@@ -277,6 +281,7 @@
       true,
       "check-format",
       "allow-leading-underscore",
+      "require-const-for-all-caps",
       "ban-keywords"
     ],
     "comment-type": [
