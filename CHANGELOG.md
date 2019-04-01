@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.14.0"></a>
+# [1.14.0](https://github.com/angular-tslint-rules/commit/compare/v1.12.1...v1.14.0) (2019-04-01)
+
+
+### Features
+
+* **atr:** update tslint rules ([#35](https://github.com/ng-seed/angular-tslint-rules/issues/35)) ([5877958](https://github.com/ng-seed/angular-tslint-rules/commit/5877958))
+
+
+
 <a name="1.12.1"></a>
 # [1.12.0](https://github.com/angular-tslint-rules/commit/compare/v1.12.0...v1.12.1) (2018-12-20)
 
