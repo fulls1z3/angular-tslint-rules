@@ -305,11 +305,6 @@ them is allowed by TypeScript*).
 ```
 
 ### <a name="variable-design"></a> Variable design
-- *Do not use* a **variable** before declaring.
-```json
-"no-use-before-declare": true
-```
-
 - *Always prefer* **`const`** keyword **where appropriate**, for values that should never change.
 - *Avoid using* **`let`** (*maintain immutability*).
 ```json

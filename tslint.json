@@ -59,7 +59,6 @@
     "await-promise": true,
     "no-return-await": true,
     "no-floating-promises": true,
-    "no-use-before-declare": true,
     "prefer-const": true,
     "no-var-keyword": true,
     "no-shadowed-variable": [
