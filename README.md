@@ -1025,11 +1025,6 @@ attacks*).
 "use-pipe-decorator": true,
 "use-pipe-transform-interface": true,
 "use-component-view-encapsulation": true,
-"angular-whitespace": [
-  true,
-  "check-interpolation",
-  "check-semicolon"
-],
 "component-class-suffix": true,
 "component-selector": [
   true,
