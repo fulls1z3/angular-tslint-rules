@@ -30,7 +30,7 @@ If you have questions, comments or suggestions, just create an issue on this rep
 these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.17.0
+- [TSLint] v5.18.0
 - [codelyzer] v5.0.0
 
 ## Table of contents:
@@ -138,7 +138,12 @@ A sample configuration is shown below, where `tslint.json` lives adjacent to you
 
 - Member **overloads** should be **consecutive**.
 ```json
-"adjacent-overload-signatures": true
+"adjacent-overload-signatures": [
+  true,
+  {
+    "ignore-accessors": true,
+  }
+]
 ```
 
 - *Always prefer* **unifying any two overloads** into one, by using a **union** or an **optional/rest parameter**. 
@@ -293,6 +298,11 @@ them is allowed by TypeScript*).
 - *Do not use* the **unnecessary** **`async`** (*if the awaited value that is not a `Promise`*).
 ```json
 "await-promise": true
+```
+
+- Functions marked **`async`** must contain an **`await`** or **`return`** statement
+```json
+"no-async-without-await": true
 ```
 
 - *Do not use* the **unnecessary** **`return await`**.
@@ -514,6 +524,17 @@ them is allowed by TypeScript*).
 "triple-equals": [
   true,
   "allow-null-check"
+]
+```
+
+- Using **comparison operators** (`>`, `>=`, `<=`, `<`) to compare *non-numbers* should be **avoided**.
+```json
+"strict-comparisons": [
+  true,
+  {
+    "allow-object-equal-comparison": true,
+    "allow-string-order-comparison": false
+  }
 ]
 ```
 

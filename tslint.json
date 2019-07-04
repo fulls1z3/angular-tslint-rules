@@ -17,7 +17,12 @@
       "variables-before-functions"
     ],
     "prefer-readonly": true,
-    "adjacent-overload-signatures": true,
+    "adjacent-overload-signatures": [
+      true,
+      {
+        "ignore-accessors": true
+      }
+    ],
     "unified-signatures": true,
     "prefer-function-over-method": [
       true,
@@ -57,6 +62,7 @@
     "unnecessary-bind": true,
     "promise-function-async": true,
     "await-promise": true,
+    "no-async-without-await": true,
     "no-return-await": true,
     "no-floating-promises": true,
     "prefer-const": true,
@@ -137,6 +143,13 @@
       true,
       "allow-null-check"
     ],
+    "strict-comparisons": [
+      true,
+      {
+        "allow-object-equal-comparison": true,
+        "allow-string-order-comparison": false
+      }
+    ],
     "increment-decrement": [
       true,
       "allow-post"
@@ -158,7 +171,7 @@
       {
         "allow-else-if": true
       }
-    ]
+    ],
     "strict-boolean-expressions": [
       true,
       "allow-undefined-union",
