@@ -2,18 +2,22 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10-browsers
+        environment:
+          JOBS: 1
     steps:
       - checkout
       - run: sudo npm install -g yarn@0
+      - run: sudo npm install -g semantic-release@15
       - run: sudo yarn global add greenkeeper-lockfile@1
       - restore_cache:
           keys:
-          - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          - deps-
+            - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - deps-
       - run: yarn
       - save_cache:
           key: deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths: 'node_modules'
       - run: yarn ci:before
       - run: yarn ci:after
+      - run: npx semantic-release
