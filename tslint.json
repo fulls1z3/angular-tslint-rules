@@ -153,7 +153,12 @@
     ],
     "no-tautology-expression": true,
     "no-boolean-literal-compare": true,
-    "unnecessary-else": true,
+    "unnecessary-else": [
+      true,
+      {
+        "allow-else-if": true
+      }
+    ]
     "strict-boolean-expressions": [
       true,
       "allow-undefined-union",
