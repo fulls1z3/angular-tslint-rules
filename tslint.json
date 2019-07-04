@@ -177,7 +177,7 @@
     ],
     "max-file-line-count": [
       true,
-      1000
+      400
     ],
     "max-line-length": [
       true,

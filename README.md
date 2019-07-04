@@ -647,9 +647,9 @@ blocks.
 ]
 ```
 
-- Files should not exceed **1500 lines** of code.
+- Files should not exceed **400 lines** of code.
 ```json
-"max-file-line-count": [true, 1500]
+"max-file-line-count": [true, 400]
 ```
 
 - Keep the length of **each line** under **140 characters**.
