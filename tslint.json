@@ -59,7 +59,6 @@
     "await-promise": true,
     "no-return-await": true,
     "no-floating-promises": true,
-    "no-use-before-declare": true,
     "prefer-const": true,
     "no-var-keyword": true,
     "no-shadowed-variable": [
@@ -325,40 +324,35 @@
     "no-empty": true,
     "no-sparse-arrays": true,
     "ban-comma-operator": true,
-    "banana-in-box": true,
-    "contextual-life-cycle": true,
-    "decorator-not-allowed": true,
-    "pipe-impure": true,
-    "templates-no-negated-async": true,
-    "i18n": [
+    "template-banana-in-box": true,
+    "contextual-lifecycle": true,
+    "contextual-decorator": true,
+    "no-pipe-impure": true,
+    "template-no-negated-async": true,
+    "template-i18n": [
       true,
       "check-id",
       "check-text"
     ],
-    "max-inline-declarations": true,
-    "no-attribute-parameter-decorator": true,
-    "no-conflicting-life-cycle-hooks": true,
+    "component-max-inline-declarations": true,
+    "no-attribute-decorator": true,
+    "no-conflicting-lifecycle": true,
     "no-forward-ref": true,
     "no-input-rename": true,
-    "no-life-cycle-call": true,
-    "no-output-named-after-standard-event": true,
+    "no-lifecycle-call": true,
+    "no-output-native": true,
     "no-output-on-prefix": true,
     "no-output-rename": true,
-    "no-template-call-expression": true,
+    "template-no-call-expression": true,
     "no-unused-css": true,
     "prefer-output-readonly": true,
     "template-conditional-complexity": true,
     "template-cyclomatic-complexity": true,
-    "trackBy-function": true,
-    "use-life-cycle-interface": true,
+    "template-use-track-by-function": true,
+    "use-lifecycle-interface": true,
     "use-pipe-decorator": true,
     "use-pipe-transform-interface": true,
-    "use-view-encapsulation": true,
-    "angular-whitespace": [
-      true,
-      "check-interpolation",
-      "check-semicolon"
-    ],
+    "use-component-view-encapsulation": true,
     "component-class-suffix": true,
     "component-selector": [
       true,
@@ -380,10 +374,10 @@
       "camelCase"
     ],
     "import-destructuring-spacing": true,
-    "no-queries-parameter": true,
+    "no-queries-metadata-property": true,
     "prefer-inline-decorator": true,
-    "use-host-property-decorator": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true
+    "no-host-metadata-property": true,
+    "no-inputs-metadata-property": true,
+    "no-outputs-metadata-property": true
   }
 }

@@ -37,7 +37,7 @@
     "semantic-release": "^15.13.18"
   },
   "peerDependencies": {
-    "codelyzer": ">=4.5.0 <5.0.0",
+    "codelyzer": "^5.0.0",
     "tslint": ">=5.14.0"
   },
   "husky": {

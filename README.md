@@ -31,7 +31,7 @@ these rules with new insights, experiences and remarks in alignment with the upd
 
 **Note**: The following set of rules depend on:
 - [TSLint] v5.12.0
-- [codelyzer] v4.5.0
+- [codelyzer] ^5.0.0
 
 ## Table of contents:
 - [Getting started](#getting-started)
@@ -306,11 +306,6 @@ them is allowed by TypeScript*).
 ```
 
 ### <a name="variable-design"></a> Variable design
-- *Do not use* a **variable** before declaring.
-```json
-"no-use-before-declare": true
-```
-
 - *Always prefer* **`const`** keyword **where appropriate**, for values that should never change.
 - *Avoid using* **`let`** (*maintain immutability*).
 ```json
@@ -1005,42 +1000,36 @@ attacks*).
 
 ### <a name="codelyzer-rules"></a> Codelyzer rules
 ```json
-"banana-in-box": true,
-"contextual-life-cycle": true,
-"decorator-not-allowed": true,
-"pipe-impure": true,
-"templates-no-negated-async": true,
-"trackBy-function": true,
-"i18n": [
+"template-banana-in-box": true,
+"contextual-lifecycle": true,
+"contextual-decorator": true,
+"no-pipe-impure": true,
+"template-no-negated-async": true,
+"template-i18n": [
   true,
   "check-id",
   "check-text"
 ],
-"no-attribute-parameter-decorator": true,
+"component-max-inline-declarations": true,
+"no-attribute-decorator": true,
+"no-conflicting-lifecycle": true,
 "no-forward-ref": true,
 "no-input-rename": true,
-"no-life-cycle-call": true,
-"no-output-named-after-standard-event": true,
+"no-lifecycle-call": true,
+"no-output-native": true,
 "no-output-on-prefix": true,
 "no-output-rename": true,
-"no-queries-parameter": true,
-"no-template-call-expression": true,
+"template-no-call-expression": true,
 "no-unused-css": true,
-"prefer-inline-decorator": true,
 "prefer-output-readonly": true,
-"use-life-cycle-interface": true,
+"template-conditional-complexity": true,
+"template-cyclomatic-complexity": true,
+"template-use-track-by-function": true,
+"use-lifecycle-interface": true,
 "use-pipe-decorator": true,
 "use-pipe-transform-interface": true,
-"use-view-encapsulation": true,
-"angular-whitespace": [
-  true,
-  "check-interpolation",
-  "check-semicolon"
-],
-"component-class-suffix": [
-  true,
-  "Component"
-],
+"use-component-view-encapsulation": true,
+"component-class-suffix": true,
 "component-selector": [
   true,
   "element",
@@ -1050,10 +1039,7 @@ attacks*).
   ],
   "kebab-case"
 ],
-"directive-class-suffix": [
-  true,
-  "Directive"
-],
+"directive-class-suffix": true,
 "directive-selector": [
   true,
   "attribute",
@@ -1064,9 +1050,11 @@ attacks*).
   "camelCase"
 ],
 "import-destructuring-spacing": true,
-"use-host-property-decorator": true,
-"use-input-property-decorator": true,
-"use-output-property-decorator": true
+"no-queries-metadata-property": true,
+"prefer-inline-decorator": true,
+"no-host-metadata-property": true,
+"no-inputs-metadata-property": true,
+"no-outputs-metadata-property": true
 ```
 
 ## <a name="contributing"></a> Contributing
