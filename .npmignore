@@ -8,8 +8,8 @@
 
 # build tools
 .gitignore
-.jshintrc
 .npmignore
+commitlint.config.js
 
 # ci tools
 /.circleci
