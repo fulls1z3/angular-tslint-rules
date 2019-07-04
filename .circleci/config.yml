@@ -1,9 +1,10 @@
 version: 2
 jobs:
   build:
-    - image: circleci/node:10-browsers
-      environment:
-        JOBS: 1
+    docker:
+      - image: circleci/node:10-browsers
+        environment:
+          JOBS: 1
     steps:
       - checkout
       - run: sudo npm install -g yarn@0
@@ -11,8 +12,8 @@ jobs:
       - run: sudo yarn global add greenkeeper-lockfile@1
       - restore_cache:
           keys:
-          - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          - deps-
+            - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - deps-
       - run: yarn
       - save_cache:
           key: deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
