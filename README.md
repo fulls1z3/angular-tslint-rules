@@ -2,9 +2,10 @@
 
 Shared [TSLint] & [codelyzer] rules to enforce a consistent code style for [Angular] development
 
-[![CircleCI](https://circleci.com/gh/fulls1z3/angular-tslint-rules.svg?style=shield)](https://circleci.com/gh/fulls1z3/angular-tslint-rules)
+[![CircleCI](https://circleci.com/gh/fulls1z3/angular-tslint-rules.svg?style=svg)](https://circleci.com/gh/fulls1z3/angular-tslint-rules)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![Greenkeeper badge](https://badges.greenkeeper.io/fulls1z3/angular-tslint-rules.svg)](https://greenkeeper.io/)
+[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
