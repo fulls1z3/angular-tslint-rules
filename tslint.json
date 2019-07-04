@@ -112,6 +112,7 @@
     "no-unnecessary-type-assertion": true,
     "callable-types": true,
     "no-null-keyword": true,
+    "no-null-undefined-union": true,
     "no-non-null-assertion": true,
     "array-type": [
       true,
