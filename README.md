@@ -30,7 +30,7 @@ If you have questions, comments or suggestions, just create an issue on this rep
 these rules with new insights, experiences and remarks in alignment with the updates on [TSLint] and [codelyzer].
 
 **Note**: The following set of rules depend on:
-- [TSLint] v5.15.0
+- [TSLint] v5.16.0
 - [codelyzer] v5.0.0
 
 ## Table of contents:
@@ -577,7 +577,12 @@ them is allowed by TypeScript*).
 
 - *Do not use* **else** blocks ending with a `break`, `continue`, `return` or `throw` statement.
 ```json
-"unnecessary-else": true
+"unnecessary-else": [
+  true, 
+  {
+    "allow-else-if": true
+  }
+]
 ```
 
 - *Do not use* any *always* **truthy**/**falsy** condition in **boolean expressions** (*except right-hand operand `&&` or `||`*). 
