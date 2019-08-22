@@ -852,10 +852,11 @@ statements;
 ]
 ```
 
-- **Vertically align** elements, members, parameters and statements (*helps maintain a readable, consistent style in your codebase*).
+- **Vertically align** arguments, elements, members, parameters and statements (*helps maintain a readable, consistent style in your codebase*).
 ```json
 "align": [
   true,
+  "arguments",
   "elements",
   "members",
   "parameters",
