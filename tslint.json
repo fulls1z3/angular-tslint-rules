@@ -36,7 +36,12 @@
     ],
     "static-this": true,
     "no-this-assignment": true,
-    "unnecessary-constructor": true,
+    "unnecessary-constructor": [
+      true,
+      {
+        "check-super-calls": true
+      }
+    ],
     "no-duplicate-super": true,
     "new-parens": true,
     "no-misused-new": true,
