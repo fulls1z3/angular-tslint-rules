@@ -31,7 +31,7 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@semantic-release/commit-analyzer": "^6.3.0",
     "@semantic-release/github": "^5.4.3",
-    "@semantic-release/npm": "^5.1.15",
+    "@semantic-release/npm": "5.1.13",
     "@semantic-release/release-notes-generator": "^7.3.0",
     "husky": "^3.0.5",
     "semantic-release": "^15.13.24"
