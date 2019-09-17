@@ -38,7 +38,7 @@
   },
   "peerDependencies": {
     "codelyzer": "^5.0.0",
-    "tslint": ">=5.19.0"
+    "tslint": ">=5.20.0"
   },
   "husky": {
     "hooks": {
