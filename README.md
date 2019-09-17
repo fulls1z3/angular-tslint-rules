@@ -45,7 +45,7 @@ If you want to file a bug, contribute some code, or improve documentation, pleas
 ## <a name="license"></a> License
 The MIT License (MIT)
 
-Copyright (c) 2018 [Burak Tasci]
+Copyright (c) 2019 [Burak Tasci]
 
 [TSLint]: https://github.com/palantir/tslint
 [codelyzer]: https://github.com/mgechev/codelyzer
