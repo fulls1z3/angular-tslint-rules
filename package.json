@@ -30,7 +30,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "husky": "^3.1.0",
-    "semantic-release": "^15.13.31"
+    "semantic-release": "^17.2.3"
   },
   "peerDependencies": {
     "codelyzer": "^5.0.0",
